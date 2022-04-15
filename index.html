@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            <input type="range" name="operand1" id="operand1" class="ope" min="1" max="5">
+            <span id="ran1"></span>
+        </div>
+
+        <div>
+            <select name="operator" id="operator">
+                <option value="add">+</option>
+                <option value="sub">-</option>
+                <option value="mul">*</option>
+                <option value="div">/</option>
+            </select>
+        </div>
+
+        <div>
+            <input type="range" name="operand2" id="operand2" class="ope" min="1" max="5">
+            <span id="ran2"></span>
+        </div>
+    </div>
+
+    <div>
+        <h3 class="qn" id="qn1"> op</h3>
+        <h3 class="qn" id="qn2"> op</h3>
+    </div>
+
+    <h3 id="ans"> ans</h3>
+    <h3 id="ansauto"> ansauto</h3>
+    <h3 id="time"> time</h3>
+
+    <button onClick="qnsgen()">next</button>
+
+    <h1>--------------------------------</h1>
+    <div>
+		<h1 id="userans"> fire</h1>
+        
+
+        <input type="button" class="btn" value="7">
+        <input type="button" class="btn" value="8">
+        <input type="button" class="btn" value="9">
+        <input type="button" class="btn" value="4">
+        <input type="button" class="btn" value="5">
+        <input type="button" class="btn" value="6">
+        <input type="button" class="btn" value="1">
+        <input type="button" class="btn" value="2">
+        <input type="button" class="btn" value="3">
+        <input type="button" class="btn" value=".">
+        <input type="button" class="btn" value="0">
+        <input type="button" class="btn" value="<=">
+    </div>
+</body>
+</html>
