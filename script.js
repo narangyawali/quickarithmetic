@@ -11,6 +11,9 @@ const userans = document.querySelector("#userans")
 const ope = document.querySelectorAll(".ope")
 const qn = document.querySelectorAll(".qn")
 
+var ansact;
+
+
 const cng =()=>{
     res1.innerText = op1.value
     res2.innerText = op2.value
@@ -36,6 +39,8 @@ const qnsgen=()=>{
     findans()
     ansbyuser =0
     userans.innerText=""
+    check.innerText =""
+
 }
 
 const ans =()=>{
@@ -43,20 +48,19 @@ const ans =()=>{
 }
 
 const findans= ()=>{
-    var ansact;
     console.log(operator.value);
     switch (operator.value) {
         case "add":
-            ansact =qn1.innerText + qn2.innerHTML
+            ansact =Number( qn1.innerText) + Number( qn2.innerHTML)
             break;
     	case "sub":
-            ansact =qn1.innerText - qn2.innerHTML
+            ansact =Number( qn1.innerText) - Number( qn2.innerHTML)
             break;
         case "mul":
-            ansact =qn1.innerText * qn2.innerHTML
+            ansact = Number(qn1.innerText) * Number( qn2.innerHTML)
             break;
         case "div":
-            ansact =qn1.innerText / qn2.innerHTML
+            ansact =Number( qn1.innerText) / Number( qn2.innerHTML)
             break;
         default:
             ansact ="error due to ..."
@@ -74,8 +78,18 @@ const handleinput=(element)=>{
 	var digit= element.target.value
     ansbyuser = ansbyuser * 10  + Number( digit)
     userans.innerText = ansbyuser
+    ansCheck()
 }
 
 btn.forEach(element => {
     element.addEventListener('click',handleinput)
 });
+
+const check = document.querySelector("#check")
+
+const ansCheck=()=>{
+    if (ansbyuser == Math.abs( ansact)) {
+        check.innerText =" milooo"
+        
+    }
+}
