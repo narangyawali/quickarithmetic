@@ -14,20 +14,20 @@
   
     <div>
         <div>
-            <span id="ran1"></span>
             <input type="range" name="operand1" id="operand1" class="ope" min="1" max="5">
+            <span id="ran1"></span>
        
-            <div class="inline">
-                <select name="operator" id="operator">
-                    <option  value="add">+</option>
-                    <option value="sub">-</option>
-                    <option value="mul">*</option>
-                    <option value="div">/</option>
-                </select>
-            </div>
-
+            
             <input type="range" name="operand2" id="operand2" class="ope" min="1" max="5">
             <span id="ran2"></span>
+        </div>
+        <div class="inline">
+            <select name="operator" id="operator">
+                <option  value="add">+</option>
+                <option value="sub">-</option>
+                <option value="mul">*</option>
+                <option value="div">/</option>
+            </select>
         </div>
     </div>
     
@@ -44,7 +44,6 @@
             <div class="">
 
                 <h3 id="time" class="inline "> time</h3>
-                <button class=" nextbtn" onClick="qnsgen()">next</button>
             </div>
         </div>
     </div>
@@ -72,6 +71,8 @@
         <input type="button" class="btn btnStyle" value="0">
         <input type="button"  id="back" class=" btnStyle" value="<=">
     </div>
+    <button class=" nextbtn" onClick="qnsgen()">next</button>
+
 </div>
 </body>
 </html>
