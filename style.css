@@ -1,0 +1,47 @@
+
+
+.inline{
+    display: inline;
+}
+
+.container{
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userAns{
+    height: 35px;
+}
+
+.btnContainer{
+    display: grid;
+	grid-template-columns: auto auto auto;
+}
+
+.btnStyle{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    margin: 5px;
+}
+.nextbtn{
+    height: 25px;
+    margin-left: 50px;
+}
+.qnsdisplayed{
+    margin: 5px;
+}
+
+.timeDisplay{
+    display: block;
+    border: 1px solid red;
+    width: 75px;
+    inline-size: 70px;
+	/* max-width: 75px; */
+}
+
+.green{
+    background-color: rgb(61, 201, 61);
+}

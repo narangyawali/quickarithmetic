@@ -9,57 +9,69 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
+
+  
     <div>
         <div>
-            <input type="range" name="operand1" id="operand1" class="ope" min="1" max="5">
             <span id="ran1"></span>
-        </div>
+            <input type="range" name="operand1" id="operand1" class="ope" min="1" max="5">
+       
+            <div class="inline">
+                <select name="operator" id="operator">
+                    <option  value="add">+</option>
+                    <option value="sub">-</option>
+                    <option value="mul">*</option>
+                    <option value="div">/</option>
+                </select>
+            </div>
 
-        <div>
-            <select name="operator" id="operator">
-                <option  value="add">+</option>
-                <option value="sub">-</option>
-                <option value="mul">*</option>
-                <option value="div">/</option>
-            </select>
-        </div>
-
-        <div>
             <input type="range" name="operand2" id="operand2" class="ope" min="1" max="5">
             <span id="ran2"></span>
         </div>
     </div>
-
-    <div>
-        <h3 class="qn" id="qn1"> op</h3>
-        <h3 class="qn" id="qn2"> op</h3>
+    
+    <div class="qnsdisplayed">
+        <h3 class="qn inline" id="qn1"> op</h3>
+       <h3 class="qn inline" id="displayedOperator"> operator</h3>
+        <h3 class="qn inline" id="qn2"> op</h3>
     </div>
+	<div>
 
-    <h3 id="ans"> ans</h3>
-    <h3 id="ansauto"> ansauto</h3>
-    <h3 id="time"> time</h3>
+        <!-- <h3 id="ans"> ans</h3> -->
+        <!-- <h3 id="ansauto"> ansauto</h3> -->
+        <div class=" inline">
+            <div class="">
 
-    <button onClick="qnsgen()">next</button>
+                <h3 id="time" class="inline "> time</h3>
+                <button class=" nextbtn" onClick="qnsgen()">next</button>
+            </div>
+        </div>
+    </div>
 
     <h1>--------------------------------</h1>
-    <div>
-
-        <h1 id="check"></h1>
-		<h1 id="userans"> fire</h1>
+    
+            <!-- <h1 id="check">miloooo</h1> -->
+            <div>
+                
+            </div>
+            <h1 id="userans" class="userAns green"> </h1>
+    <div class="btnContainer">
         
 
-        <input type="button" class="btn" value="7">
-        <input type="button" class="btn" value="8">
-        <input type="button" class="btn" value="9">
-        <input type="button" class="btn" value="4">
-        <input type="button" class="btn" value="5">
-        <input type="button" class="btn" value="6">
-        <input type="button" class="btn" value="1">
-        <input type="button" class="btn" value="2">
-        <input type="button" class="btn" value="3">
-        <input type="button" class="btn" value=".">
-        <input type="button" class="btn" value="0">
-        <input type="button" class="btn" value="<=">
+        <input type="button" class="btn btnStyle" value="7">
+        <input type="button" class="btn btnStyle" value="8">
+        <input type="button" class="btn btnStyle" value="9">
+        <input type="button" class="btn btnStyle" value="4">
+        <input type="button" class="btn btnStyle" value="5">
+        <input type="button" class="btn btnStyle" value="6">
+        <input type="button" class="btn btnStyle" value="1">
+        <input type="button" class="btn btnStyle" value="2">
+        <input type="button" class="btn btnStyle" value="3">
+        <input type="button" class=" btnStyle" value=".">
+        <input type="button" class="btn btnStyle" value="0">
+        <input type="button"  id="back" class=" btnStyle" value="<=">
     </div>
+</div>
 </body>
 </html>

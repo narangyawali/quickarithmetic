@@ -7,12 +7,18 @@ const qn1 = document.querySelector("#qn1")
 const qn2 = document.querySelector("#qn2")
 const ansbydev = document.querySelector("#ansauto")
 const userans = document.querySelector("#userans")
+const time = document.querySelector("#time")
+const displayedOperator = document.querySelector("#displayedOperator")
+const back = document.querySelector("#back")
 
 const ope = document.querySelectorAll(".ope")
 const qn = document.querySelectorAll(".qn")
 
 var ansact;
 
+var startTime
+var endTime
+var timeDiff
 
 const cng =()=>{
     res1.innerText = op1.value
@@ -34,13 +40,16 @@ qn.forEach(ele=>{
 })
 
 const qnsgen=()=>{
-    qn1.innerText = Math.floor( Math.random() * Math.pow(10,2))
-    qn2.innerText = Math.floor( Math.random() * Math.pow(10,2))
+    qn1.innerText = Math.floor( Math.random() * Math.pow(10,Number( op1.value)))
+    qn2.innerText = Math.floor( Math.random() * Math.pow(10,Number(op2.value)))
     findans()
     ansbyuser =0
     userans.innerText=""
-    check.innerText =""
+    userans.classList.remove("green")
 
+    // check.innerText =""
+	startTime = Date.now()
+    time.innerText = "time"
 }
 
 const ans =()=>{
@@ -49,6 +58,7 @@ const ans =()=>{
 
 const findans= ()=>{
     console.log(operator.value);
+    displayedOperator.innerText = operator.value
     switch (operator.value) {
         case "add":
             ansact =Number( qn1.innerText) + Number( qn2.innerHTML)
@@ -60,36 +70,64 @@ const findans= ()=>{
             ansact = Number(qn1.innerText) * Number( qn2.innerHTML)
             break;
         case "div":
-            ansact =Number( qn1.innerText) / Number( qn2.innerHTML)
+            // ansact =Number( qn1.innerText) / Number( qn2.innerHTML)
+            // for ease result is in integer
+            ansact =parseInt( Number( qn1.innerText) / Number( qn2.innerHTML))
             break;
         default:
             ansact ="error due to ..."
             break;
     }
 
-    ansbydev.innerText = Math.abs( ansact)
+    // ansbydev.innerText = Math.abs( ansact)
 }
+
+operator.addEventListener('change',findans)
 
 const btn = document.querySelectorAll(".btn")
 
 var ansbyuser =  0
 
 const handleinput=(element)=>{
+    userans.classList.remove("green")
 	var digit= element.target.value
     ansbyuser = ansbyuser * 10  + Number( digit)
     userans.innerText = ansbyuser
     ansCheck()
+
 }
 
 btn.forEach(element => {
     element.addEventListener('click',handleinput)
 });
 
-const check = document.querySelector("#check")
+// const check = document.querySelector("#check")
 
 const ansCheck=()=>{
     if (ansbyuser == Math.abs( ansact)) {
-        check.innerText =" milooo"
-        
+        // check.innerText =" milooo"
+        // ans check and give feedback
+        userans.classList.add("green")
+        endTime = Date.now()
+        timeDiff = Math.round((endTime - startTime )/100)/10  
+        console.log(timeDiff);
+        time.innerText = timeDiff + "  sec"
+
+    }
+    else{
+        userans.classList.remove("green")
+
     }
 }
+
+const backevent =()=>{
+	ansbyuser = Math.floor( ansbyuser/ 10)
+    userans.innerText = ansbyuser
+    ansCheck() 
+    
+}
+
+back.addEventListener('click',backevent)
+
+
+qnsgen()
