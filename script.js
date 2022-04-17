@@ -39,9 +39,25 @@ qn.forEach(ele=>{
    
 })
 
+const getRandNum=()=>{
+
+    var randNum = Math.floor( Math.random() * Math.pow(10,Number( op1.value)))
+
+    if(randNum <= 1){
+        return getRandNum()
+
+    }
+    else{
+        return randNum
+    }
+
+}
+
 const qnsgen=()=>{
-    qn1.innerText = Math.floor( Math.random() * Math.pow(10,Number( op1.value)))
-    qn2.innerText = Math.floor( Math.random() * Math.pow(10,Number(op2.value)))
+
+    qn1.innerText = getRandNum()
+    qn2.innerText = getRandNum()
+
     findans()
     ansbyuser =0
     userans.innerText=""
