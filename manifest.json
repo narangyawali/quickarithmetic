@@ -1,0 +1,14 @@
+{
+    "name":"Quick Arithmetic",
+    "start_url":".",
+    "background_color":"#6079f2",
+    "theme_color":"#6079f2",
+    "display":"standalone",
+    "icons":[
+        {
+            "src":"./assets/icon192.png",
+            "sizes":"192x192",
+            "type":"image/png"
+        }
+    ]
+}
