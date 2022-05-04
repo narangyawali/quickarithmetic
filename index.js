@@ -7,9 +7,9 @@ const serviceWorkerInit=()=>{
 }
 // serviceWorkerInit()
 
-if (serviceWorker in navigator){
+if ("serviceWorker" in navigator){
     navigator.serviceWorker.register("sw.js").then(registration=>{
-        console.log("service log registered !!!")
+        console.log("service worker registered !!!")
         console.log(registration)
 
     }).catch(error=>{
