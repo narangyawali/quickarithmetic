@@ -16,7 +16,7 @@
           "name": "How's weather today?",
           "short_name": "Today",
           "description": "View weather information for today",
-          "url": "/",
+          "url": "./",
           "icons": [{ "src":"./assets/icon192.png",
             "sizes":"192x192",
             "type":"image/png" }]
@@ -25,7 +25,7 @@
           "name": "How's weather tomorrow?",
           "short_name": "Tomorrow",
           "description": "View weather information for tomorrow",
-          "url": "/",
+          "url": "./",
           "icons": [{ "src":"./assets/icon192.png",
             "sizes":"192x192",
             "type":"image/png" }]
