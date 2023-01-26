@@ -140,7 +140,12 @@ const keydown =(eve)=>{
     if (eve.key=="Backspace" ) {
         backevent()
     }
+    if (eve.key=="b") {
+      backevent()
+    }
 }
+
+
 
 document.addEventListener("keydown", keydown);
 
