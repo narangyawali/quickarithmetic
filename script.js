@@ -137,7 +137,7 @@ document.addEventListener("keypress", handleKeybaordInput);
 
 const keydown =(eve)=>{
     console.log(eve);
-    if (eve.key=="b" ) {
+    if (eve.key=="Backspace" ) {
         backevent()
     }
     if (eve.key=="b") {
