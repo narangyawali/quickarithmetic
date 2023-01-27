@@ -123,12 +123,8 @@ const handleKeybaordInput = (keyboardInput) => {
       
   }
 
-  if(keyboardInput.code == "Space"){
+  if(keyboardInput.code == "Space" ||keyboardInput.code == "Enter"||keyboardInput.code=="KeyN"){
 qnsgen()  }
-
-  if(keyboardInput.code == "Enter"){
-qnsgen()
-}
 
 
 };
